@@ -1,0 +1,10 @@
+{
+  "name": "safs-patternlab-php-twig",
+  "version": "1.0.0",
+  "scripts":{
+    "sass-watch": "node-sass source/css/scss/main.scss --watch --output=source/css/style.css --output-style=compressed --source-map=true"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  }
+}

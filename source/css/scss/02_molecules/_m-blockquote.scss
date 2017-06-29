@@ -1,0 +1,37 @@
+.m-blockquote {
+  background: $color-gray-light;
+  font-size: $font-size-l;
+  padding: $space-inset-l;
+  quotes: "\201C""\201D""\2018""\2019";
+  &:before {
+    content: open-quote;
+    font-size: $font-size-base * 4;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  p {
+    display: inline;
+  }
+}
+.m-blockquote__footer {
+  padding-top: $space-m;
+  text-align: right;
+}
+
+.m-blockquote__cite {
+  font-size: $font-size-base;
+  &:before {
+    content: '\2014 \A0';
+  }
+}
+
+@media (max-width: 30rem) {
+  .m-blockquote {
+    font-size: $font-size-base;
+    padding: $space-inset-m;
+  }
+  .m-blockquote__cite {
+    font-size: $font-size-s;
+  }
+}

@@ -1,0 +1,55 @@
+// Color variables
+// Start them with $color for easier listing and identification
+
+// Neutrals
+$color-white:           #fff;
+$color-black:           #000;
+$color-gray-base:       hsl(0, 0%, 27%); //#444
+$color-gray-60:         hsl(0, 0%, 60%);
+$color-gray-70:         hsl(0, 0%, 70%);
+$color-gray-80:         hsl(0, 0%, 80%);
+$color-gray-90:         hsl(0, 0%, 90%);
+$color-gray-msu:        #97a2a2;
+
+// MSU colors from @https://brand.msu.edu/design-visual/index.html#color
+// ** pass/fail contrast test on white background
+$color-red:             #cb5a28; // fail
+$color-orange:          #f08521; // fail
+$color-bronze:          #c89a58; // fail
+$color-tan:             #e8d9b5; // fail
+$color-yellow-green:    #d1de3f; // fail
+$color-green-light:     #94ae4a; // fail
+$color-green:           #0db14b; // fail
+$color-msu-green:       #18453B; // PASS
+$color-blue-green:      #008183; // PASS
+$color-blue:            #909ab7; // fail
+$color-purple:          #6e005f; // PASS
+
+// This is in the footer instructions but not the color palette...
+$color-msu-yellow-green:#4C7E00;
+
+// Versions that work with white (>4.5 contrast ratio)
+$color-red-contrast:          #C05426;
+$color-orange-contrast:       #B16219;
+$color-bronze-contrast:       #927040;
+$color-tan-contrast:          #7D7662;
+$color-yellow-green-contrast: #747B22;
+$color-green-light-contrast:  #6A7D36;
+$color-green-contrast:        #09883A;
+$color-blue-contrast:         #6D768A;
+
+// Brand Colors
+$color-brand-primary:   $color-blue-green;
+$color-brand-secondary: $color-purple;
+$color-brand-success:   $color-green-contrast;
+$color-brand-info:      $color-blue-contrast;
+$color-brand-warning:   $color-yellow-green-contrast;
+$color-brand-danger:    $color-red-contrast;
+
+// Color helpers
+$color-text: #444;
+$color-text-muted: #555;
+$color-gray-light: $color-gray-90;
+$color-link: $color-green-contrast;
+$color-link--hover: shade($color-link, 40%);
+

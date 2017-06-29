@@ -1,0 +1,29 @@
+// green glow around focused elements
+@mixin focus {
+  border-color: $color-green-light;
+  outline: none;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(13,177,75,.6);
+}
+
+@mixin no-focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+// background colors (for buttons)
+@mixin background($color, $percentage:30%) {
+  background-color: $color;
+  &:hover, &:active, &:focus {
+    background-color: shade($color, $percentage);
+  }
+}
+
+// clearfix
+@mixin clearfix {
+  &:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+}

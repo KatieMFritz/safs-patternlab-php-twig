@@ -1,0 +1,26 @@
+a {
+  color: $color-link;
+  text-decoration: none;
+  &:hover, &:focus, &:active {
+    color: $color-link--hover;
+    text-decoration: underline;
+  }
+}
+
+.a-social-link {
+  background-image: url(/images/social-icons-sprite.png);
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 10px;
+}
+
+.a-social-link--facebook {
+  background-position: 0 0;
+}
+
+.a-social-link--linkedin {
+  background-position: -64px 0;
+}

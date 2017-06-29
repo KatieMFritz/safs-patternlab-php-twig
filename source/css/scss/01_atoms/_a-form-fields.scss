@@ -1,0 +1,52 @@
+input:not([type="radio"]):not([type="checkbox"]), textarea, select {
+  border: 1px solid $color-gray-msu;
+  border-radius: $border-radius;
+  display: block;
+  margin: $space-inline-m;
+  padding: $space-inset-squish-s;
+}
+
+input, textarea, select {
+  &:focus {
+    border-color: $color-green-light;
+    outline: none;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(13,177,75,.6);
+  }
+}
+
+label {
+  display: inline-block;
+  font-weight: bold;
+  margin: $space-inline-xs;
+}
+
+// TODO: write a mixin for this
+.error {
+  input, textarea {
+    background-color: tint($color-red, 80%);
+    border-color: $color-red;
+  }
+}
+
+.valid {
+  input, textarea {
+    background-color: tint($color-green, 80%);
+    border-color: $color-green;
+  }
+}
+
+abbr[title="Required"] {
+  color: $color-red;
+  border: none;
+}
+
+/* Checkboxes and Radio Buttons */
+form {
+  legend {
+    font-weight: bold;
+    margin: $space-stack-m;
+  }
+  ul {
+    list-style: none;
+  }
+}

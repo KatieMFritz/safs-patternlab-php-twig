@@ -1,0 +1,96 @@
+/* MSU Web Typography and Font Standards:
+* @http://cabs.msu.edu/web/msu-web-standards.html#s5
+*/
+
+$font-family-sans-serif: 'Gotham SSm', Helvetica, Arial, sans-serif;
+$font-family-serif: 'Californian', Georgia, 'Times New Roman', serif;
+
+$font-size-base: 1rem;
+$font-size-s: $font-size-base * .75;
+$font-size-l: $font-size-base * 1.25;
+$phi: 1.618;
+
+html {
+  font-size: 100%;
+}
+
+body, input, textarea, select, optgroup, option {
+  color: $color-text;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  line-height: 1.5;
+}
+
+p {
+  margin: $space-stack-default;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+/* Heading sizes (h1-h4) based on the Golden Ratio.
+* @http://www.lauradhamilton.com/the-golden-ratio-and-typography
+*/
+
+h1 {
+  font-size: $font-size-base * power($phi, 4);
+  font-weight: bold;
+  font-variant: small-caps;
+  margin: $space-stack-l;
+  @media (max-width: 50rem) {
+    font-size: $font-size-base * power($phi, 3);
+  }
+}
+
+h2 {
+  font-size: $font-size-base * power($phi, 3);
+  font-variant: small-caps;
+  font-weight: bold;
+  margin: $space-stack-m;
+  @media (max-width: 50rem) {
+    font-size: $font-size-base * power($phi, 2);
+  }
+}
+
+h3 {
+  font-size: $font-size-base * power($phi, 2);
+  font-variant: small-caps;
+  font-weight: bold;
+  margin: $space-stack-m;
+  @media (max-width: 50rem) {
+    font-size: $font-size-base * power($phi, 1);
+  }
+}
+
+h4 {
+  font-size: $font-size-base * power($phi, 0);
+  font-weight: bold;
+  margin: $space-stack-s;
+}
+
+h5, h6 {
+  font-size: $font-size-base;
+  font-variant: small-caps;
+  font-weight: bold;
+  margin: $space-stack-m;
+}
+
+// Lists are in their own section (01_atoms/_a-lists.scss)
+
+small {
+  font-size: $font-size-s;
+}
+
+abbr[title], acronym[title] {
+  text-decoration: none;
+  border-bottom: 2px solid $color-blue;
+}
+
+mark {
+  background-color: tint($color-green-light, 70%);
+}
+
+time {
+  font-size: $font-size-s;
+  font-style: italic;
+}

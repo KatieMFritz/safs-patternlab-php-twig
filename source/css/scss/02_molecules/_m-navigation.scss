@@ -1,0 +1,94 @@
+.m-nav {
+  // background-color: gray;
+  // padding: $space-inset-m;
+}
+
+.m-nav__list {
+  //background-color: skyblue;
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.m-nav__item {
+  display: inline-table;
+}
+
+/* styles just for primary nav */
+.m-nav--primary {
+  background-color: $color-yellow-green-contrast;
+  .m-nav__list {
+    float: left;
+    padding: $space-s 0;
+  }
+  .m-nav__item {
+    float: left;
+    padding: $space-inset-squish-m;
+    margin: 0;
+  }
+  .m-nav__link {
+    color: $color-white;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:hover, &:focus, &.is-active {
+      background-color: $color-msu-green;
+      text-decoration: none;
+    }
+  }
+}
+
+/* TODO: Add mobile nav */
+
+/* TODO: Add dropdowns */
+
+/* Styles just for MSU Footer
+* @ http://cabs.msu.edu/web/msu-web-standards.html#73
+*/
+
+/* TODO: Use nth-child to only show separators when needed */
+.m-website-info, .m-msu-nav, .m-msu-info {
+  font-size: 0; // to override a display issue (space between inline items)
+  line-height: 1;
+  margin: 0;
+  .m-nav__item {
+    margin: $space-stack-xs;
+    padding: 0 $space-s;
+  }
+}
+
+.m-website-info {
+  .m-nav__item {
+    color: $color-msu-green;
+    font-size: .75rem;
+  }
+  .m-nav__item:not(:last-child) {
+    border-right: 1px solid $color-msu-green;
+  }
+  a {
+    color: $color-msu-green;
+  }
+  @media (max-width: 400px) {
+    text-align: center;
+  }
+}
+
+.m-msu-nav, .m-msu-info {
+  .m-nav__item {
+    color: $color-msu-green;
+    font-size: .5625rem;
+  }
+  @media (min-width: 390px) {
+    .m-nav__item:not(:last-child) {
+      border-right: 1px solid $color-msu-yellow-green;
+    }
+  }
+  a {
+    color: $color-msu-yellow-green;
+  }
+}
+
+.spartans-will {
+  font-weight: 600;
+  text-transform: uppercase;
+}

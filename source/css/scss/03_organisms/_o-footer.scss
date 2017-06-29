@@ -1,0 +1,47 @@
+/* MSU Web Standards: Footer
+* @http://cabs.msu.edu/web/msu-web-standards.html#s3
+* @http://cabs.msu.edu/web/msu-web-standards.html#s7
+*/
+
+/* This is the separator in the MSU footer. */
+.o-footer__hr {
+  border-bottom: 1px dotted #999;
+  border-top: none;
+  margin: 0 $space-s $space-xs;
+  @media (max-width: 600px) {
+    margin: $space-s;
+  }
+}
+
+.o-footer__navs {
+  max-width: 300px;
+}
+
+.o-footer__wordmark {
+  max-width: 221px;
+  padding: $space-m $space-s;
+}
+
+/* a little extra space to set this apart */
+.m-msu-info {
+  margin-top: $space-xs;
+}
+
+/* Display wordmark to the left of nav when screen is wide enough */
+@media (min-width: 30rem) {
+  .o-footer {
+    display: grid;
+    grid-template-columns: 221px auto;
+  }
+  .o-footer__wordmark {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    padding: 0;
+  }
+  .o-footer__navs {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    max-width: 100%;
+    padding-left: $space-m;
+  }
+}
