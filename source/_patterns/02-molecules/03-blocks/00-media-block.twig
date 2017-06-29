@@ -1,0 +1,18 @@
+<article class="m-media-block">
+
+  <a href="{{ entry.url }}" class="m-media-block__image__link">
+    <img class="m-media-block__image" src="{{ img.square.src }}" alt="{{ square.alt }}">
+  </a>
+
+  <h4><a href="{{ entry.url }}">{{ headline.short }}</a></h4>
+
+  {% include "molecules-byline" %}
+
+  <section class="m-media-block__summary">
+    <p>{{ excerpt.short }}</p>
+  </section>
+
+  <footer class="m-media-block__footer">
+    {% include "atoms-labels" %}
+  </footer>
+</article>

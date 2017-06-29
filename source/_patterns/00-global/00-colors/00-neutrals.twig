@@ -1,0 +1,20 @@
+{% set colors = {
+  "$color-white": "#fff",
+  "$color-black": "#000",
+  "$color-gray-base": "hsl(0, 0%, 27%)",
+  "$color-gray-60": "hsl(0, 0%, 60%)",
+  "$color-gray-70": "hsl(0, 0%, 70%)",
+  "$color-gray-80": "hsl(0, 0%, 80%)",
+  "$color-gray-90": "hsl(0, 0%, 90%)",
+  "$color-gray-msu": "#97a2a2"
+} %}
+
+<ul class="sg-colors">
+ {% for name, value in colors %}
+  <li>
+    <span class="sg-swatch" style="background-color: {{ value }}"></span>
+    <span class="sg-label">{{ name }}</span><br>
+    <code class="sg-label">{{ value }}</code>
+  </li>
+  {% endfor %}
+</ul>

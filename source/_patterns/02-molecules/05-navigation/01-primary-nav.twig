@@ -1,0 +1,24 @@
+<!--https://mijingo.com/blog/key-value-arrays-in-twig-->
+
+{% set nav_links = {
+    about:      { slug: "#", title: "About" },
+    resources:  { slug: "#", title: "Resources" },
+    reqs:       { slug: "#", title: "Minor Requirements" },
+    blog:       { slug: "#", title: "Blog" },
+    contact:    { slug: "#", title: "Contact" }
+} %}
+
+<nav class="m-nav m-nav--primary u-clearfix">
+  <div class="u-container">
+    <ul class="m-nav__list u-clearfix">
+      <li class="m-nav__item">
+        <a href="{{ siteUrl }}" class="m-nav__link" aria-label="Home">
+          <span class="icon-home"></span>
+        </a>
+      </li>
+      {% for item in nav_links %}
+        <li class="m-nav__item"><a class="m-nav__link" href="{{ item.slug }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div><!-- /.container -->
+</nav>

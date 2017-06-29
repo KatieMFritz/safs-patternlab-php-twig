@@ -1,0 +1,23 @@
+{% set colors = {
+  "$color-red": "#cb5a28",
+  "$color-orange": "#f08521",
+  "$color-bronze": "#c89a58",
+  "$color-tan": "#e8d9b5",
+  "$color-yellow-green": "#d1de3f",
+  "$color-green-light": "#94ae4a",
+  "$color-green": "#0db14b",
+  "$color-msu-green": "#18453B",
+  "$color-blue-green": "#008183",
+  "$color-blue":"#909ab7",
+  "$color-purple": "#6e005f"
+} %}
+
+<ul class="sg-colors">
+ {% for name, value in colors %}
+  <li>
+    <span class="sg-swatch" style="background-color: {{ value }}"></span>
+    <span class="sg-label">{{ name }}</span><br>
+    <code class="sg-label">{{ value }}</code>
+  </li>
+  {% endfor %}
+</ul>
