@@ -34,7 +34,7 @@ The Standard Edition for Twig comes with the following components:
 
 **Please note:** Pattern Lab uses [Composer](https://getcomposer.org/) to manage project dependencies. To upgrade the Standard Edition for Twig or to install plug-ins you'll need to [install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx). We recommend that you [install it globally](https://getcomposer.org/doc/00-intro.md#globally).
 
-### Sass support: [see setup notes](https://gist.github.com/KatieMFritz/38dda99e71bb7cef7afa2ff57f63f2f4)
+### Yarn (for Sass support): [see setup notes](https://gist.github.com/KatieMFritz/89e2e303f88fae8218767cd385314839)
 
 
 ## Installing
@@ -93,7 +93,7 @@ The CSS for this project is inspired by Atomic Design principes and these blog p
  - https://www.lullabot.com/articles/bem-atomic-design-a-css-architecture-worth-loving
  - https://blog.alexdevero.com/atomic-design-scalable-modular-css-sass/
 
- It uses Sass ([see setup notes](https://gist.github.com/KatieMFritz/38dda99e71bb7cef7afa2ff57f63f2f4)) for more robust organization.
+ It uses Sass ([see setup notes](https://gist.github.com/KatieMFritz/89e2e303f88fae8218767cd385314839)) for more robust organization.
 
  All scss files can be found in `source/css/scss`.
  ```
