@@ -2,9 +2,16 @@
   "name": "safs-patternlab-php-twig",
   "version": "1.0.0",
   "scripts":{
-    "sass-watch": "node-sass source/css/scss/main.scss --watch --output=source/css/style.css --output-style=compressed --source-map=true"
+    "dev:sass-watch": "node-sass source/css/scss/style.scss --watch --output=source/css/ --output-style=compressed --source-map=true",
+    "dev:server": "php core/console --server",
+    "dev:watch": "php core/console --watch",
+    "dev": "run-p dev:*",
+    "deploy:sass": "node-sass source/css/scss/style.scss --output=source/css/ --output-style=compressed --source-map=true",
+    "deploy:generate": "php core/console --generate",
+    "deploy": "run-s deploy:sass deploy:generate"
   },
   "devDependencies": {
-    "node-sass": "^4.5.3"
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2"
   }
 }

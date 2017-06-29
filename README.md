@@ -6,7 +6,7 @@ Contact: [Katie Fritz](http://katiemfritz.com)
 - [Resources](#resources)
 - [Stack](#stack)
 - [Installing](#installing)
-- [Helfpul Commands](#helpful-commands)
+- [Serving in the Browser](#serving-in-the-browser)
 - [Editing SAFS Pattern Lab](#editing-safs-pattern-lab)
 - [License](#license)
 
@@ -34,12 +34,12 @@ The Standard Edition for Twig comes with the following components:
 
 **Please note:** Pattern Lab uses [Composer](https://getcomposer.org/) to manage project dependencies. To upgrade the Standard Edition for Twig or to install plug-ins you'll need to [install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx). We recommend that you [install it globally](https://getcomposer.org/doc/00-intro.md#globally).
 
-### Yarn (for Sass support): [see setup notes](https://gist.github.com/KatieMFritz/89e2e303f88fae8218767cd385314839)
+### Yarn (for Sass and parallel process support): [see setup notes](https://gist.github.com/KatieMFritz/89e2e303f88fae8218767cd385314839)
 
 
 ## Installing
 
-Make sure [Composer is installed globally](https://getcomposer.org/doc/00-intro.md#globally).
+Make sure [Composer is installed globally](https://getcomposer.org/doc/00-intro.md#globally) and Yarn is installed globally (`npm install --global yarn`).
 
 * download or `git clone` this repository to an install location.
 
@@ -48,39 +48,26 @@ Make sure [Composer is installed globally](https://getcomposer.org/doc/00-intro.
     ```
     cd install/location
     composer install
+    yarn install
     ```
 
-Running `composer install` from a directory containing a `composer.json` file will download all dependencies defined within.
+Running `composer install` from a directory containing a `composer.json` file will download all dependencies defined within. Running `yarn install` does the same for the `package.json` file.
 
 _Note: To update Pattern Lab please refer to each component's GitHub repository._
 
-## Helpful Commands
+## Serving in the Browser
 
-These are some helpful commands you can use on the command line for working with Pattern Lab.
+_This installation uses Yarn to manage dev processes. For the base commands, view the [Pattern Lab Twig Standard Edition docs] (https://github.com/pattern-lab/edition-php-twig-standard#helpful-commands)._
 
-### List all of the available commands
+The first time you generate your pattern lab, use the command
 
-To list all available commands type:
+    yarn deploy
 
-    php core/console --help
+After that, you should be able to use
 
-### Generate Pattern Lab
+    yarn dev
 
-To generate the front-end for Pattern Lab type:
-
-    php core/console --generate
-
-### Watch for changes and re-generate Pattern Lab
-
-To watch for changes and re-generate the front-end for Pattern Lab type:
-
-    php core/console --watch
-
-### Start a server to view Pattern Lab
-
-You can use PHP's built-in web server to review your Pattern Lab project in a browser. In a seperate window type:
-
-    php core/console --server
+This will start a php server, watch for changes, and also compile scss on the fly.
 
 Then open [http://localhost:8080](http://localhost:8080) in your browser.
 
@@ -123,7 +110,7 @@ To add new styles:
  _Do not change `pattern-scaffolding.css` - it's a Pattern Lab asset._
 
 ### Adding Images
-Add images to `public/images`. The image pipeline from `source` isn't working.
+Add images to `source/images`. Reference them with `src="../../images/title.jpg`.
 
 
 ## LICENSE
