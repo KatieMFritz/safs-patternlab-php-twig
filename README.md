@@ -123,12 +123,12 @@ To add new styles:
  _Do not change `pattern-scaffolding.css` - it's a Pattern Lab asset._
 
 ### Adding Images
-Add images to 'public/images'. The image pipeline from 'source' isn't working.
+Add images to `public/images`. The image pipeline from `source` isn't working.
 
 
 ## LICENSE
-Pattern HTML and CSS copyright 2017 Katie M Fritz, LLC. Pattern Lab core and MSU graphics and design principles do not belong to me.
+Pattern HTML and CSS copyright &copy; 2017 [Katie M Fritz, LLC](http://katiemfritz.com). Pattern Lab core and MSU graphics and design principles do not belong to me.
 
-Pattern Lab licensing:
+Pattern Lab info:
 ![license](https://img.shields.io/github/license/pattern-lab/edition-php-twig-standard.svg)
 [![Packagist](https://img.shields.io/packagist/v/pattern-lab/edition-twig-standard.svg)](https://packagist.org/packages/pattern-lab/edition-mustache-webdesignday) [![Gitter](https://img.shields.io/gitter/room/pattern-lab/php.svg)](https://gitter.im/pattern-lab/php)
