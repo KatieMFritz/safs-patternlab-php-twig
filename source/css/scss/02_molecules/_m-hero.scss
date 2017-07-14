@@ -1,0 +1,49 @@
+.m-hero__text {
+  @extend .m-intro
+}
+
+.m-hero {
+  @media (min-width: 600px) {
+    background: url(../../images/safs/Kim-Jen.JPG) center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 30vw;
+    width: 100%;
+
+    .m-hero--top {
+      justify-content: flex-start;
+    }
+
+    .m-hero--middle {
+      justify-content: center;
+    }
+
+    .m-hero--bottom {
+      justify-content: flex-end;
+    }
+
+    .m-hero__text {
+      background-color: $color-white;
+      opacity: 0.8;
+      * {
+        opacity: 1.0;
+      }
+    }
+    .m-hero__title {
+      color: $color-white;
+      text-align: center;
+      opacity: 1.0;
+      & .m-hero {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

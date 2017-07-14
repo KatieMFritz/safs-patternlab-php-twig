@@ -1,0 +1,21 @@
+{% extends "templates-site" %}
+
+{% block content %}
+
+  {% include "molecules-hero-text" %}
+
+  <section>
+    <h2 class="a-section-heading--blue-green">Latest Blog Posts</h2>
+    {% include "molecules-media-block" %}
+    {% include "molecules-media-block" %}
+    {% include "molecules-media-block" %}
+  </section>
+
+  <section>
+    <h2 class="a-section-heading--purple">What is sustainability?</h2>
+    {% include "molecules-blurb-block" %}
+    {% include "molecules-blurb-block" %}
+    {% include "molecules-blurb-block" %}
+  </section>
+
+{% endblock %}

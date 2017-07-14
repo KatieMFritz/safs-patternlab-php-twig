@@ -33,8 +33,7 @@ p {
 */
 
 h1 {
-  background-color: $color-gray-base;
-  color: $color-white;
+  color: $color-brand-primary;
   font-size: $font-size-base * power($phi, 4);
   font-weight: 900;
    margin: $space-stack-l;

@@ -1,5 +1,6 @@
 .m-media-block {
   border: 4px solid $color-yellow-green;
+  display: inline-block;
   max-width: 16rem;
   margin: $space-inline-l;
   padding: $space-inset-m;
@@ -15,4 +16,19 @@
 
 .m-media-block__summary {
   margin: $space-stack-s;
+}
+
+
+.m-blurb-block {
+  display: inline-block;
+  margin: $space-inline-l;
+  max-width: 16rem;
+  img {
+    display: block;
+    margin: 0 auto $space-s;
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+  }
 }

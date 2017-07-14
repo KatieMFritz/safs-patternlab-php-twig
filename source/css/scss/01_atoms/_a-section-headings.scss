@@ -1,0 +1,30 @@
+@mixin section-heading($class, $colors...) {
+  @each $i in $colors {
+    .#{$class}#{nth($i, 1)} {
+      background-color: nth($i, 2);
+    }
+  }
+}
+
+h2[class^="a-section-heading--"] {
+  color: $color-white;
+  font-size: $font-size-l;
+  font-weight: normal;
+  padding: $space-s 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  margin: $space-stack-m 0;
+}
+
+@include section-heading('a-section-heading--',
+  'red' $color-red-contrast,
+  'orange' $color-orange-contrast,
+  'bronze' $color-bronze-contrast,
+  'tan' $color-tan-contrast,
+  'yellow-green' $color-yellow-green-contrast,
+  'green' $color-green,
+  'blue-green' $color-blue-green,
+  'blue' $color-blue-contrast,
+  'purple' $color-purple
+);
