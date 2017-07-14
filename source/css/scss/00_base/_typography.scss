@@ -33,19 +33,20 @@ p {
 */
 
 h1 {
+  background-color: $color-gray-base;
+  color: $color-white;
   font-size: $font-size-base * power($phi, 4);
-  font-weight: bold;
-  font-variant: small-caps;
-  margin: $space-stack-l;
+  font-weight: 900;
+   margin: $space-stack-l;
   @media (max-width: 50rem) {
     font-size: $font-size-base * power($phi, 3);
   }
 }
 
 h2 {
+  color: $color-black;
   font-size: $font-size-base * power($phi, 3);
-  font-variant: small-caps;
-  font-weight: bold;
+  font-weight: 900;
   margin: $space-stack-m;
   @media (max-width: 50rem) {
     font-size: $font-size-base * power($phi, 2);
@@ -53,8 +54,8 @@ h2 {
 }
 
 h3 {
+  color: $color-black;
   font-size: $font-size-base * power($phi, 2);
-  font-variant: small-caps;
   font-weight: bold;
   margin: $space-stack-m;
   @media (max-width: 50rem) {
@@ -63,12 +64,14 @@ h3 {
 }
 
 h4 {
-  font-size: $font-size-base * power($phi, 0);
+  color: $color-black;
+  font-size: $font-size-base * power($phi, 1);
   font-weight: bold;
   margin: $space-stack-s;
 }
 
 h5, h6 {
+  color: $color-black;
   font-size: $font-size-base;
   font-variant: small-caps;
   font-weight: bold;

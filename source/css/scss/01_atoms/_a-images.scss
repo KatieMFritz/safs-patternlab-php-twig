@@ -12,3 +12,13 @@ img {
 .a-msu-wordmark, .a-msu-masthead {
   width: 100%;
 }
+
+.a-headshot {
+  border-radius: $border-radius-round;
+  max-width: 6rem;
+}
+
+.a-badge {
+  border-radius: $border-radius-leaf;
+  max-width: 10rem;
+}

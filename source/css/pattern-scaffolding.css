@@ -52,3 +52,18 @@
   font-size: 90%;
   line-height: 1;
 }
+
+/* Added to make descriptions more readable */
+
+.sg-pattern-desc {
+  color: #333 !important;
+}
+
+.sg-pattern-desc h2 {
+  font-size: 1.5rem;
+}
+
+.patternLink {
+  color: #008183;
+  font-variant: small-caps;
+}
