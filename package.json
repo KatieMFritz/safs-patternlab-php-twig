@@ -1,7 +1,7 @@
 {
   "name": "safs-patternlab-php-twig",
   "version": "1.0.0",
-  "scripts":{
+  "scripts": {
     "dev:sass-watch": "node-sass source/css/scss/style.scss --watch --output=source/css/ --output-style=compressed --source-map=true",
     "dev:server": "php core/console --server",
     "dev:watch": "php core/console --watch",
