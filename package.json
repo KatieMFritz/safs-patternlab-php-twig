@@ -10,8 +10,12 @@
     "deploy:generate": "php core/console --generate",
     "deploy": "run-s deploy:sass deploy:generate"
   },
-  "devDependencies": {
+  "dependencies": {
     "bootstrap": "^4.0.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.11.0"
+  },
+  "devDependencies": {
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2"
   }
