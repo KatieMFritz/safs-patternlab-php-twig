@@ -11,6 +11,7 @@
     "deploy": "run-s deploy:sass deploy:generate"
   },
   "devDependencies": {
+    "bootstrap": "^4.0.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2"
   }

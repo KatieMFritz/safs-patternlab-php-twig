@@ -20,7 +20,7 @@ publicDir: public
 sourceDir: source
 defaultPattern: all
 defaultShowPatternInfo: true
-baseDir: 'C:/wamp64/www/safs-patternlab-php-twig\'
+baseDir: 'C:/wamp64/www/safs-patternlab-php-twig/'
 lineageMatch: '{%([ ]+)?include( |\()[&quot;\&#039;]([A-Za-z0-9-_]+)[&quot;\&#039;](\))?(.*)%}'
 lineageMatchKey: 3
 patternExtension: twig
@@ -38,4 +38,4 @@ ishMaximum: '2600'
 ishControlsHide:
     - hay
 styleguideKit: pattern-lab/styleguidekit-twig-default
-styleguideKitPath: vendor/pattern-lab/styleguidekit-twig-default
+styleguideKitPath: 'vendor/pattern-lab/styleguidekit-twig-default'

@@ -53,7 +53,18 @@ Make sure [Composer is installed globally](https://getcomposer.org/doc/00-intro.
 
 Running `composer install` from a directory containing a `composer.json` file will download all dependencies defined within. Running `yarn install` does the same for the `package.json` file.
 
-_Note: To update Pattern Lab please refer to each component's GitHub repository._
+## Updating
+
+This project must be updated from the command line. Use the following commands, then address any errors:
+
+    ```
+    composer update
+    yarn update
+    ```
+
+You may need to run `yarn deploy` again after making updates.
+
+_Note: To update Pattern Lab itself, please refer to each component's GitHub repository._
 
 ## Serving in the Browser
 
@@ -76,29 +87,11 @@ Then open [http://localhost:8080](http://localhost:8080) in your browser.
 
 ### CSS Architecture
 
-The CSS for this project is inspired by Atomic Design principes and these blog posts:
- - https://www.lullabot.com/articles/bem-atomic-design-a-css-architecture-worth-loving
- - https://blog.alexdevero.com/atomic-design-scalable-modular-css-sass/
+This project builds on Bootstrap 4 (stable beta) to improve the learning curve for other developers and make it more portable and extendable.
 
- It uses Sass ([see setup notes](https://gist.github.com/KatieMFritz/89e2e303f88fae8218767cd385314839)) for more robust organization.
+It uses Sass ([see setup notes](https://gist.github.com/KatieMFritz/89e2e303f88fae8218767cd385314839)) for more robust organization.
 
- All scss files can be found in `source/css/scss`.
- ```
- - 00_base
-    - _colors.scss (color variables)
-    - _reset.scss
-    - _space.scss (spacing variables)
-    - _typography.scss (fonts and base typography)
-    - _utilities.scss (utility or helper classes; use sparingly)
- - 01_atoms
-    - styles applied to atom-level components. Prefix classes with a-.
- - 02_molecules
-    - styles applied to molecule-level components. Prefix classes with m-.
- - 03_organisms
-    - styles applied to organism-level components. Prefix classes with o-.
- - 04_templates
-```
-All scss files are imported into `main.scss`, which gets compiled into `main.css`.
+All custom scss files can be found in `source/css/scss`. All scss files are imported into `main.scss`, which gets compiled into `main.css`.
 
 To add new styles:
 - First make sure the styles don't exist; use a project-wide search if needed.
