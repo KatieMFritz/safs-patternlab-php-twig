@@ -1,10 +1,28 @@
 <form action="#">
-    <fieldset class="options">
-        <legend>Checkbox <abbr title="Required">*</abbr></legend>
-        <ul>
-            <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label></li>
-            <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label></li>
-            <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label></li>
-        </ul>
-    </fieldset>
+  <fieldset>
+
+    <legend>Checkbox <abbr title="Required">*</abbr></legend>
+
+    <div class="form-check">
+      <label class="form-check-label" for="checkbox1" >
+        <input class="form-check-input" id="checkbox1" name="checkbox" type="checkbox" checked="checked" >
+        Choice A
+      </label>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label" for="checkbox2" >
+        <input class="form-check-input" id="checkbox2" name="checkbox" type="checkbox" >
+        Choice B
+      </label>
+    </div>
+
+    <div class="form-check disabled">
+      <label class="form-check-label" for="checkbox3" >
+        <input class="form-check-input" id="checkbox3" name="checkbox" type="checkbox" disabled>
+        Choice C
+      </label>
+    </div>
+
+  </fieldset>
 </form>

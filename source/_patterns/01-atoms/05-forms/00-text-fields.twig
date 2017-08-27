@@ -1,24 +1,24 @@
 {% macro input(name, type, classes, label, placeholder, value, size, required) %}
-    {% set show_label = label|default(true) %}
-    <div class="field-container {{ classes }}">
-        {% if show_label %}
-            <label for="{{ name }}" class="{{ classes }}">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}
-            </label>
-        {% endif %}
-        <input type="{{ type|default('text') }}" name="{{ name }}" id="{{ name }}" placeholder="{{ placeholder|default(name|title) }}" value="{{ value|e }}" size="{{ size|default(20) }}"{% if required %} required{% endif %} />
-    </div>
+{% set show_label = label|default(true) %}
+<div class="form-group">
+  {% if show_label %}
+  <label for="{{ name }}" class="form-control-label">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}
+  </label>
+  {% endif %}
+  <input type="{{ type|default('text') }}" name="{{ name }}" id="{{ name }}" class="form-control" placeholder="{{ placeholder|default(name|title) }}" value="{{ value|e }}" size="{{ size|default(20) }}"{% if required %} required{% endif %} />
+</div>
 {% endmacro %}
 
 {% macro textarea(label, placeholder, rows, classes) %}
-    {% set show_label = label|default(true) %}
-    <div class="field-container {{ classes }}">
-        {% if show_label %}
-            <label for="{{ label }}" class="{{ classes }}">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}
-            </label>
-        {% endif %}
-        <textarea id="{{ label }}" placeholder="{{ placeholder|default(name|title) }}" rows="{{ rows|default(8) }}"{% if required %} required{% endif %}></textarea>
-        {% if show_label %}</label>{% endif %}
-    </div>
+{% set show_label = label|default(true) %}
+<div class="form-group">
+  {% if show_label %}
+  <label for="{{ label }}" class="form-control-label">{{ label|default(name|title) }}{% if required %}<abbr title="Required">*</abbr>{% endif %}
+  </label>
+  {% endif %}
+  <textarea id="{{ label }}" class="form-control" placeholder="{{ placeholder|default(name|title) }}" rows="{{ rows|default(8) }}"{% if required %} required{% endif %}></textarea>
+  {% if show_label %}</label>{% endif %}
+</div>
 {% endmacro %}
 
 {% import _self as forms %}
