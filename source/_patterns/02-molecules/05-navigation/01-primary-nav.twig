@@ -8,17 +8,20 @@
     contact:    { slug: "#", title: "Contact" }
 } %}
 
-<nav class="m-nav m-nav--primary u-clearfix">
-  <div class="u-container">
-    <ul class="m-nav__list u-clearfix">
-      <li class="m-nav__item">
-        <a href="{{ siteUrl }}" class="m-nav__link" aria-label="Home">
-          <span class="icon-home"></span>
-        </a>
-      </li>
-      {% for item in nav_links %}
-        <li class="m-nav__item"><a class="m-nav__link" href="{{ item.slug }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div><!-- /.container -->
+{% set navclass = "navbar-nav mr-2" %}
+
+<nav style="flex-basis:100%;" role="navigation" aria-labelledby="mainmenulabel">
+  <h2 class="sr-only" id="mainmenulabel">Main Menu</h2>
+  <ul class="{{ navclass }}">
+    <li class="nav-item">
+      <a class="nav-link pl-md-0" href="{{ siteUrl }}" aria-label="Home">
+        <span class="icon-home">Home</span>
+      </a>
+    </li>
+    {% for item in nav_links %}
+    <li class="nav-item">
+      <a class="nav-link" href="{{ item.slug }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </nav>

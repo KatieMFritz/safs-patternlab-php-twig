@@ -1,8 +1,13 @@
-<header class="o-header">
-  <section class="o-header__msu">
+<header class="bg-light">
+  <section class="navbar flex-wrap navbar-light bg-light navbar-expand-md container align-items-start">
     {% include "molecules-msu-masthead-link" %}
-    {% include "molecules-msu-search" %}
+    {% include "atoms-navbar-toggler" %}
+    <div class="collapse navbar-collapse justify-content-end flex-wrap order-5" id="navbarNav">
+      {% include "molecules-msu-search" %}
+      {% include "molecules-primary-nav" %}
+    </div>
+    <div class="container pl-0">
+      {% include "molecules-site-name" %}
+    </div>
   </section>
-  <h1 class="o-header__site-name">Sustainable Agriculture and Food Systems</h1>
-  {% include "molecules-primary-nav" %}
 </header>

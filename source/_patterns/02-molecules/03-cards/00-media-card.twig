@@ -1,0 +1,22 @@
+<article class="card border rounded-0" style="max-width: 300px;">
+
+  <a href="{{ entry.url }}">
+    <img class="card-img-top" src="{{ img.square.src }}" alt="{{ square.alt }}">
+  </a>
+
+  <section class="card-body">
+
+    <h4 class="card-title">
+      <a href="{{ entry.url }}">{{ headline.short }}</a>
+    </h4>
+
+    <h6 class="card-subtitle mb-2 text-muted">{% include "molecules-byline" %}</h6>
+
+    <p class-"card-text">{{ excerpt.short }}</p>
+
+  </section>
+
+  <footer class="card-footer">
+    {% include "atoms-labels" %}
+  </footer>
+</article>

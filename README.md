@@ -89,6 +89,8 @@ Then open [http://localhost:8080](http://localhost:8080) in your browser.
 
 This project builds on Bootstrap 4 (stable beta) to improve the learning curve for other developers and make it more portable and extendable.
 
+Follow the [Code Guide by @mdo](http://codeguide.co/) for coding style guidelines.
+
 It uses Sass ([see setup notes](https://gist.github.com/KatieMFritz/89e2e303f88fae8218767cd385314839)) for more robust organization.
 
 All custom scss files can be found in `source/css/scss`. All scss files are imported into `main.scss`, which gets compiled into `main.css`.

@@ -1,13 +1,26 @@
-<form class="m-form--search" id="globalsearch-form">
-  <input type="hidden" name="client" value="{{ siteName }}">
-  <input type="hidden" name="sitesearch" value="{{ siteUrl }}" />
-
-  <label class="u-sr-only" for="globalsearch" >Search MSU</label>
-
-  <input class="m-form--search__input" type="text" accesskey="4" id="globalsearch" name="q"  placeholder="Search">
-
-  <button class="m-form--search__button" type="submit" aria-label="Search">
-    <span class="icon-search"></span>
-  </button>
+<form
+  class="form-inline input-group"
+  id="globalsearch-form"
+  style="max-width: 319px; border: 1px #666 solid; border-radius: 3px;"
+  role="search"
+>
+{# TODO: clean up styles #}
+  <input name="client" value="{{ siteName }}" type="hidden">
+  <input name="sitesearch" value="{{ siteUrl }}" type="hidden">
+  <input
+    class="form-control border-right-0"
+    id="globalsearch"
+    name="q"
+    accesskey="4"
+    type="text"
+    placeholder="Search..."
+    aria-label="Search MSU"
+  >
+  <span class="input-group-btn rounded-0">
+    <button class="btn btn-light border-left-0" type="submit" aria-label="Submit">
+      <span aria-hidden="true">&raquo;</span>
+      <span class="sr-only">Submit</span>
+    </button>
+  </span>
 
 </form>

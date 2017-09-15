@@ -1,0 +1,39 @@
+// Header styles
+@include media-breakpoint-up(md) {
+  #globalsearch-form {
+    position: absolute;
+    top: $spacer;
+    right: 0px;
+  }
+}
+
+// Footer styles
+.msu-nav li {
+  color: $msu;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  a {
+    color: $msu;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#standard-footer-site-links {
+  border-bottom: 1px dotted $msu;
+}
+
+#standard-footer-msu-info li {
+  font-size: 9px;
+  font-size: 0.5625rem;
+
+  a {
+    color: $green;
+    font-weight: bold;
+  }
+}
